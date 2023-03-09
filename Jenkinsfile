@@ -9,8 +9,8 @@ pipeline{
     }
     stage('Execute'){
       steps{
-        sh "./algotithm.sh > output.log"
-        archiveArtifacts allowEmptyArchive: true, artifacts: '**/output.log', fingerprint: true, followSymlinks: false
+        sh "./algotithm.sh"
+        archiveArtifacts allowEmptyArchive: true, artifacts: '**/8.txt', fingerprint: true, followSymlinks: false
       }
       
     }
