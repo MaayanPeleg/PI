@@ -10,7 +10,7 @@ pipeline{
     stage('Execute'){
       steps{
         sh "./algorithm.sh"
-        archiveArtifacts allowEmptyArchive: true, artifacts: '**/8.txt', fingerprint: true, followSymlinks: false
+        archiveArtifacts allowEmptyArchive: true, artifacts: '**/*.txt', fingerprint: true, followSymlinks: false
       }
       
     }
